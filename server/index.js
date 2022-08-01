@@ -7,7 +7,7 @@ const PORT = 3000 ;
 const controller = require("./controller");
 //app.use(express.static('client/dist'));
 app.use(express.json());
-app.use(cors({ origin: ['http://localhost:3001']}))
+//app.use(cors({ origin: ['http://localhost:3001/']}))
 
 app.post('/meters/METER_ID', controller.postId);
 app.post('/meters', controller.post);
