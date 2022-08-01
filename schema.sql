@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS meters (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+label TEXT
+);
+
+CREATE TABLE IF NOT EXISTS meter_data (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  timestampM TEXT,
+  valueM INTEGER,
+  meter_id INTEGER,
+  CONSTRAINT meter_data_fk_meter_id
+    FOREIGN KEY (id)
+    REFERENCES meters(id)
+);
